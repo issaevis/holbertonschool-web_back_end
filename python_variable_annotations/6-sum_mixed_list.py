@@ -3,9 +3,7 @@ from typing import List, Union
 '''type annotated function'''
 
 
-T = List[Union[float, int]]
-
-def sum_mixed_list(mxd_lst: T) -> float:
+def sum_mixed_list(mxd_lst: List[Union[float, int]]) -> float:
     sum = 0
     for number in mxd_lst:
         sum += number
