@@ -4,7 +4,6 @@
 
 num = list[float]
 
-
 def sum_list(input_list: num) ->float:
     '''return a sum of floats in a list'''
     sum = 0
