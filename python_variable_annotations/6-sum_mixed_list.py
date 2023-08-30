@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+'''module that annotates values to functions'''
 from typing import List, Union
 '''type annotated function'''
 
