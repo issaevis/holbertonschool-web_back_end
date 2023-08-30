@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 '''defines and annotates values'''
+from typing import List
 
 
-def sum_list(input_list: list[float]) -> float:
+def sum_list(input_list: List[float]) -> float:
     '''return a sum of floats in a list'''
 
     sum = 0
