@@ -3,7 +3,7 @@ from typing import List, Union
 '''type annotated function'''
 
 
-T = List[Union[float | int]]
+T = List[Union[float, int]]
 
 def sum_mixed_list(mxd_lst: T) -> float:
     sum = 0
