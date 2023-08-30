@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-from typing import List, Union
+from typing import Union
 '''type annotated function'''
 
 
-T : [int, float]
+def to_kv(k: str, v: Union[int, float]) -> tuple:
+    '''func that returns a tuple'''
+    ret = (k, v**2)
 
-def to_kv(k: str,v: T) -> tuple:
-    
+    return ret
