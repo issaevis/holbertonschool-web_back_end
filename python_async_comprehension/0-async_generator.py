@@ -6,7 +6,7 @@ from random import triangular
 import typing
 
 
-async def async_generator() -> typing.Generator[float, NoneType, NoneType]:
+async def async_generator() -> typing.Generator[float, None, None]:
     '''yields a random float'''
 
     for i in range(10):
