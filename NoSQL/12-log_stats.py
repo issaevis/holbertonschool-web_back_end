@@ -21,4 +21,16 @@ if total_logs != 0:
     for method, count in method_counts.items():
         print(f"\tmethod {method}: {count}")
     print(f"{status_check_count} status check")
+else:
+    print('''
+0 logs
+Methods:
+\tmethod GET: 0
+\tmethod POST: 0
+\tmethod PUT: 0
+\tmethod PATCH: 0
+\tmethod DELETE: 0
+0 status check
+
+''')
 client.close()
