@@ -8,6 +8,8 @@ db = client.logs
 collection = db.nginx
 
 total_logs = collection.count_documents({})
+if total_logs == 0:
+    return
 
 http_methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
 method_counts = {method: collection.count_documents(
