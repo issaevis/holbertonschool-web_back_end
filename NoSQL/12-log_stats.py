@@ -8,20 +8,17 @@ db = client.logs
 collection = db.nginx
 
 total_logs = collection.count_documents({})
-if total_logs == 0:
-    return
+if total_logs != 0:
+    http_methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
+    method_counts = {method: collection.count_documents(
+        {"method": method}) for method in http_methods}
 
-http_methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
-method_counts = {method: collection.count_documents(
-    {"method": method}) for method in http_methods}
+    status_check_count = collection.count_documents(
+        {"method": "GET", "path": "/status"})
 
-status_check_count = collection.count_documents(
-    {"method": "GET", "path": "/status"})
-
-print(f"{total_logs} logs")
-print("Methods:")
-for method, count in method_counts.items():
-    print(f"\tmethod {method}: {count}")
-print(f"{status_check_count} status check")
-
+    print(f"{total_logs} logs")
+    print("Methods:")
+    for method, count in method_counts.items():
+        print(f"\tmethod {method}: {count}")
+    print(f"{status_check_count} status check")
 client.close()
