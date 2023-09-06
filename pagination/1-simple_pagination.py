@@ -46,6 +46,6 @@ class Server:
             return []
 
         end_index = min(end_index, total_rows - 1)
-        page_data = dataset[start_index:end_index + 1]
+        page_data = dataset[start_index:end_index]
 
         return page_data
