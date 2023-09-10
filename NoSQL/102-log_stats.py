@@ -43,7 +43,7 @@ def main():
     print(f"\tmethod DELETE: {count({'method': 'DELETE'})}")
     print(f"{count({'method': 'GET', 'path': '/status'})} status check")
 
-    print("IP:")
+    print("IPs:")
     result = countv2()
     for doc in result:
         print(f"\t{doc['_id']}: {doc['count']}")
