@@ -1,0 +1,2 @@
+// lists all docus starting with the name Holberton
+db.school.find({"name": "Holberton"})
