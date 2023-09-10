@@ -6,6 +6,7 @@ import pymongo
 
 
 def top_students(mongo_collection):
+    '''returns a list with the fields needed by the main'''
     pipeline = [
         {"$unwind": "$topics"},
         {
